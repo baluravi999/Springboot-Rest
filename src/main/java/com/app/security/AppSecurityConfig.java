@@ -12,11 +12,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @Configuration
- @EnableWebSecurity
+ @EnableWebSecurity // enable web security
 public class AppSecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Override
-	@Bean
+	@Bean  
 	protected UserDetailsService userDetailsService() {
 		
 		List<UserDetails> users=new ArrayList();

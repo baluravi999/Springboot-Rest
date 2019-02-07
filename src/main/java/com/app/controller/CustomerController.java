@@ -22,7 +22,7 @@ public class CustomerController {
 
 	@Autowired
 	private CustomerDao dao;
-
+      // here we are using security concept ..so configure with springboot security
 	 @RequestMapping("/")
 		public String homePahge() {
 			
