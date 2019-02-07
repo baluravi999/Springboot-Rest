@@ -23,7 +23,12 @@ public class CustomerController {
 	@Autowired
 	private CustomerDao dao;
 
-	
+	 @RequestMapping("/")
+		public String homePahge() {
+			
+			return "Welcome to Cusomer Home Page";
+		}
+	 
 	  @GetMapping("/cust/{id}")
 	  
 	  public Optional<Customer> getCust(@PathVariable("id")int id) {
@@ -33,7 +38,7 @@ public class CustomerController {
 	  
 	  }
 	  
-	  @RequestMapping(path = "/ListCust" , produces= {"application/xml"} )
+	  @RequestMapping(path = "/ListCust" , produces= {"application/json"} )
 	  
 	  @ResponseBody public List<Customer> getAllCust() {
 	  
